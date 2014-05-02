@@ -12,5 +12,11 @@
 *.la
 *.a
 
+# Compiled execute files
+*.exe
+*.out
+
 # Vim backup files
 *~
+*.swp
+*.stackdump
