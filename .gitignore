@@ -20,3 +20,6 @@
 *~
 *.swp
 *.stackdump
+
+# Input file
+pat_basic/in.txt
