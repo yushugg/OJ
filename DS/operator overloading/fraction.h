@@ -31,7 +31,7 @@ public:
 
   // io
   friend std::ostream& operator<<(std::ostream& out, const Fraction& f);
-  friend std::istream& operator>>(std::istream& in, const Fraction& f);
+  friend std::istream& operator>>(std::istream& in, Fraction& f);
 
   // comparison
   friend bool operator==(const Fraction& f1, const Fraction& f2);

@@ -21,7 +21,8 @@ Fraction::Fraction(const Fraction& f)
   std::cout << "Copy construct fraction: " << numerator << "/" << denominator << std::endl;
 }
 
-virtual Fraction::~Fraction()
+// virtual must not be written
+Fraction::~Fraction()
 {
   std::cout << "destroy fraction: " << numerator << "/" << denominator << std::endl;
 }
@@ -62,25 +63,33 @@ void Fraction::reciprocal()
   denominator = temp;
 }
 
+// !!! friend function not a member function, so must not Fraction::operator+
 Fraction operator+(const Fraction& f1, const Fraction& f2)
 {
-  return Fraction(f1.numerator*f2.denominator+f2.numerator*f1.denominator, f1.denominator*f2.denominator).reduction();
+  Fraction f = Fraction(f1.numerator*f2.denominator+f2.numerator*f1.denominator, f1.denominator*f2.denominator);
+  f.reduction();
+  return f;
 }
 
 Fraction operator-(const Fraction& f1, const Fraction& f2)
 {
-  return Fraction(f1.numerator*f2.denominator-f2.numerator*f1.denominator, f1.denominator*f2.denominator).reduction();
+  Fraction f = Fraction(f1.numerator*f2.denominator-f2.numerator*f1.denominator, f1.denominator*f2.denominator);
+  f.reduction();
+  return f;
 }
 
 Fraction operator*(const Fraction& f1, const Fraction& f2)
 {
-  return Fraction(f1.numerator*f2.numerator, f1.denominator*f2.denominator).reduction();
+  Fraction f = Fraction(f1.numerator*f2.numerator, f1.denominator*f2.denominator);
+  f.reduction();
+  return f;
 }
 
 Fraction operator/(const Fraction& f1, const Fraction& f2)
 {
   Fraction temp(f2);
-  return f1*f2.reciprocal();
+  temp.reciprocal();
+  return f1*temp;
 }
 
 std::ostream& operator<<(std::ostream& out, const Fraction& f)
@@ -89,10 +98,12 @@ std::ostream& operator<<(std::ostream& out, const Fraction& f)
   return out;
 }
 
-std::istream& operator>>(std::istream& in, const Fraction& f)
+// !!!Fraction must not be const
+std::istream& operator>>(std::istream& in, Fraction& f)
 {
   std::cout << "Input a fraction, two numbers" << std::endl;
-  in >> f.numerator >> f.denominator;
+  in >> f.numerator;
+  in >> f.denominator;
   return in;
 }
 
@@ -176,6 +187,7 @@ Fraction Fraction::operator--(int)
 
 Fraction& Fraction::operator=(const Fraction& f)
 {
+  // Must compare pointer
   if (this == &f)
     return *this;
 
