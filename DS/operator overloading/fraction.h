@@ -19,8 +19,8 @@ private:
   int gcd() const;
 
 public:
-  Fraction& reduction();
-  Fraction& reciprocal();
+  void reduction();
+  void reciprocal();
 
 public:
   // arithmetric
