@@ -10,7 +10,7 @@ public:
   virtual ~ZeroDivisionException();
 
 public:
-  void printException();
+  void printException() const;
 };
 
 #endif

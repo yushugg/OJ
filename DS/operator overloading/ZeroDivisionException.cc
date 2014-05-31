@@ -10,7 +10,7 @@ ZeroDivisionException::~ZeroDivisionException()
   std::cout << "Destroy ZeroDivisionException" << std::endl;
 }
 
-void ZeroDivisionException::printException()
+void ZeroDivisionException::printException() const
 {
   std::cerr << "Zero Division Error!" << std::endl;
 }

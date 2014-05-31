@@ -3,7 +3,6 @@
 
 Fraction::Fraction()
 {
-  flag = true;
   numerator = 1;
   denominator = 1;
   std::cout << "Construct default fraction: ";
@@ -12,28 +11,26 @@ Fraction::Fraction()
 
 Fraction::Fraction(int num, int deno)
 {
-  numerator = num >= 0 ? num : -num;
-  denominator = deno >= 0 ? deno : -deno;
-  flag = num*deno >= 0;
-
-  if (!denominator)
+  if (!deno)
     throw ZeroDivisionException();
 
-  std::cout << "Construct fraction: ";
+  numerator = num >= 0 ? num : -num;
+  denominator = deno >= 0 ? deno : -deno;
+
+  bool flag = num*deno >= 0;
   if (!flag)
-    std::cout << '-';
+    numerator = -numerator;
+
+  std::cout << "Construct fraction: ";
   std::cout << numerator << "/" << denominator << std::endl;
 }
 
 Fraction::Fraction(const Fraction& f)
 {
-  flag = f.flag;
   numerator = f.numerator;
   denominator = f.denominator;
 
   std::cout << "Copy construct fraction: ";
-  if (!flag)
-    std::cout << '-';
   std::cout << numerator << "/" << denominator << std::endl;
 }
 
@@ -41,14 +38,12 @@ Fraction::Fraction(const Fraction& f)
 Fraction::~Fraction()
 {
   std::cout << "Destroy fraction: ";
-  if (!flag)
-    std::cout << '-';
   std::cout << numerator << "/" << denominator << std::endl;
 }
 
 int Fraction::gcd() const
 {
-  int max = numerator;
+  int max = numerator >= 0 ? numerator : -numerator;
   int min = denominator;
   if (max < min)
   {
@@ -79,8 +74,14 @@ void Fraction::reduction()
 
 void Fraction::reciprocal()
 {
-  if (!denominator)
+  if (!numerator)
     throw ZeroDivisionException();
+
+  if (numerator < 0)
+  {
+    numerator = -numerator;
+    denominator = -denominator;
+  }
 
   int temp = numerator;
   numerator = denominator;
@@ -125,35 +126,39 @@ std::ostream& operator<<(std::ostream& out, const Fraction& f)
 // !!!Fraction must not be const
 std::istream& operator>>(std::istream& in, Fraction& f)
 {
-  std::cout << "Input a fraction, two numbers" << std::endl;
-  in >> f.numerator;
-  in >> f.denominator;
+  std::cout << "Input a fraction, two integers" << std::endl;
+  int num, deno;
+  in >> num;
+  in >> deno;
+
+  if (!deno)
+    throw ZeroDivisionException();
+  
+  f.numerator = num >= 0 ? num : -num;
+  f.denominator = deno >= 0 ? deno : -deno;
+
+  bool flag = num*deno >= 0;
+  if (!flag)
+    f.numerator = -f.numerator;
+
   return in;
 }
 
 bool operator==(const Fraction& f1, const Fraction& f2)
 {
-  Fraction temp1(f1), temp2(f2);
-  temp1.reduction();
-  temp2.reduction();
-  
-  return temp1.numerator * temp2.denominator == temp1.denominator * temp2.numerator;
+  return f1.numerator * f2.denominator == f1.denominator * f2.numerator;
 }
 
 bool operator!=(const Fraction& f1, const Fraction& f2)
 {
-  Fraction temp1(f1), temp2(f2);
-  temp1.reduction();
-  temp2.reduction();
-  
-  return temp1.numerator * temp2.denominator != temp1.denominator * temp2.numerator;
+  return f1.numerator * f2.denominator != f1.denominator * f2.numerator;
 }
 
 bool operator>(const Fraction& f1, const Fraction& f2)
 {
   Fraction result = f1 - f2;
 
-  return result.numerator*result.denominator > 0;
+  return result.numerator > 0;
 }
 
 bool operator<(const Fraction& f1, const Fraction& f2)
@@ -165,7 +170,7 @@ bool operator>=(const Fraction& f1, const Fraction& f2)
 {
   Fraction result = f1 - f2;
 
-  return result.numerator*result.denominator >= 0;
+  return result.numerator >= 0;
 }
 
 bool operator<=(const Fraction& f1, const Fraction& f2)
@@ -180,7 +185,7 @@ Fraction Fraction::operator-()
 
 bool Fraction::operator!()
 {
-  return *this != Fraction(0, 1);
+  return numerator == 0;
 }
 
 Fraction& Fraction::operator++()
