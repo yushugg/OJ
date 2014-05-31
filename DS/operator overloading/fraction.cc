@@ -1,37 +1,55 @@
+#include "ZeroDivisionException.h"
 #include "fraction.h"
 
 Fraction::Fraction()
 {
+  flag = true;
   numerator = 1;
   denominator = 1;
-  std::cout << "Construct fraction: " << numerator << "/" << denominator << std::endl;
+  std::cout << "Construct default fraction: ";
+  std::cout << numerator << "/" << denominator << std::endl;
 }
 
 Fraction::Fraction(int num, int deno)
 {
-  numerator = num;
-  denominator = deno;
-  std::cout << "Construct fraction: " << numerator << "/" << denominator << std::endl;
+  numerator = num >= 0 ? num : -num;
+  denominator = deno >= 0 ? deno : -deno;
+  flag = num*deno >= 0;
+
+  if (!denominator)
+    throw ZeroDivisionException();
+
+  std::cout << "Construct fraction: ";
+  if (!flag)
+    std::cout << '-';
+  std::cout << numerator << "/" << denominator << std::endl;
 }
 
 Fraction::Fraction(const Fraction& f)
 {
+  flag = f.flag;
   numerator = f.numerator;
   denominator = f.denominator;
-  std::cout << "Copy construct fraction: " << numerator << "/" << denominator << std::endl;
+
+  std::cout << "Copy construct fraction: ";
+  if (!flag)
+    std::cout << '-';
+  std::cout << numerator << "/" << denominator << std::endl;
 }
 
 // virtual must not be written
 Fraction::~Fraction()
 {
-  std::cout << "destroy fraction: " << numerator << "/" << denominator << std::endl;
+  std::cout << "Destroy fraction: ";
+  if (!flag)
+    std::cout << '-';
+  std::cout << numerator << "/" << denominator << std::endl;
 }
 
 int Fraction::gcd() const
 {
-  int max = numerator >= 0 ? numerator : -numerator;
-  int min = denominator >= 0 ? denominator : -denominator;
-
+  int max = numerator;
+  int min = denominator;
   if (max < min)
   {
     int temp = max;
@@ -52,12 +70,18 @@ int Fraction::gcd() const
 void Fraction::reduction()
 {
   int gcdNum = gcd();
-  numerator /= gcdNum;
-  denominator /= gcdNum;
+  if (gcdNum)
+  {
+    numerator /= gcdNum;
+    denominator /= gcdNum;
+  }
 }
 
 void Fraction::reciprocal()
 {
+  if (!denominator)
+    throw ZeroDivisionException();
+
   int temp = numerator;
   numerator = denominator;
   denominator = temp;

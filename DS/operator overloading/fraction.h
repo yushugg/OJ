@@ -8,6 +8,7 @@ class Fraction
 private:
   int numerator;
   int denominator;
+  bool flag;
 
 public:
   Fraction();
