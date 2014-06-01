@@ -1,0 +1,97 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+LIST_H_	.\list.h	2;"	d
+List	.\list.cc	/^List<Type>::List()$/;"	f	class:List	signature:()
+List	.\list.cc	/^List<Type>::List(const List<Type>& list)$/;"	f	class:List	signature:(const List<Type>& list)
+List	.\list.h	/^  List();$/;"	p	class:List	access:public	signature:()
+List	.\list.h	/^  List(const List<Type>& list);$/;"	p	class:List	access:public	signature:(const List<Type>& list)
+List	.\list.h	/^class List$/;"	c
+List::List	.\list.cc	/^List<Type>::List()$/;"	f	class:List	signature:()
+List::List	.\list.cc	/^List<Type>::List(const List<Type>& list)$/;"	f	class:List	signature:(const List<Type>& list)
+List::List	.\list.h	/^  List();$/;"	p	class:List	access:public	signature:()
+List::List	.\list.h	/^  List(const List<Type>& list);$/;"	p	class:List	access:public	signature:(const List<Type>& list)
+List::back	.\list.cc	/^Type List<Type>::back()$/;"	f	class:List	signature:()
+List::back	.\list.h	/^  Type back();$/;"	p	class:List	access:public	signature:()
+List::clear	.\list.cc	/^void List<Type>::clear()$/;"	f	class:List	signature:()
+List::clear	.\list.h	/^  void clear();$/;"	p	class:List	access:public	signature:()
+List::empty	.\list.cc	/^bool List<Type>::empty()$/;"	f	class:List	signature:()
+List::empty	.\list.h	/^  bool empty();$/;"	p	class:List	access:public	signature:()
+List::front	.\list.cc	/^Type List<Type>::front()$/;"	f	class:List	signature:()
+List::front	.\list.h	/^  Type front();$/;"	p	class:List	access:public	signature:()
+List::header	.\list.h	/^  Node<Type>* header;$/;"	m	class:List	access:private
+List::operator =	.\list.cc	/^List& List<Type>::operator=(const List<Type>& list)$/;"	f	class:List	signature:(const List<Type>& list)
+List::operator =	.\list.h	/^  List& operator=(const List<Type>& list);$/;"	p	class:List	access:public	signature:(const List<Type>& list)
+List::pop_back	.\list.cc	/^void List<Type>::pop_back()$/;"	f	class:List	signature:()
+List::pop_back	.\list.h	/^  void pop_back();$/;"	p	class:List	access:public	signature:()
+List::pop_front	.\list.cc	/^void List<Type>::pop_front()$/;"	f	class:List	signature:()
+List::pop_front	.\list.h	/^  void pop_front();$/;"	p	class:List	access:public	signature:()
+List::push_back	.\list.cc	/^void List<Type>::push_back(const Type& value)$/;"	f	class:List	signature:(const Type& value)
+List::push_back	.\list.h	/^  void push_back(const Type& value);$/;"	p	class:List	access:public	signature:(const Type& value)
+List::push_front	.\list.cc	/^void List<Type>::push_front(const Type& value)$/;"	f	class:List	signature:(const Type& value)
+List::push_front	.\list.h	/^  void push_front(const Type& value);$/;"	p	class:List	access:public	signature:(const Type& value)
+List::show	.\list.cc	/^void List<Type>::show()$/;"	f	class:List	signature:()
+List::show	.\list.h	/^  void show();$/;"	p	class:List	access:public	signature:()
+List::size	.\list.cc	/^size_t List<Type>::size()$/;"	f	class:List	signature:()
+List::size	.\list.h	/^  size_t size();$/;"	p	class:List	access:public	signature:()
+List::size	.\list.h	/^  size_t size;$/;"	m	class:List	access:private
+List::sort	.\list.cc	/^void List<Type>::sort()$/;"	f	class:List	signature:()
+List::sort	.\list.h	/^  void sort();$/;"	p	class:List	access:public	signature:()
+List::tail	.\list.h	/^  Node<Type>* tail;$/;"	m	class:List	access:private
+List::~List	.\list.cc	/^List<Type>::~List()$/;"	f	class:List	signature:()
+List::~List	.\list.h	/^  virtual ~List();$/;"	p	class:List	access:public	signature:()
+NODE_H_	.\node.h	2;"	d
+Node	.\node.cc	/^Node<Type>::Node()$/;"	f	class:Node	signature:()
+Node	.\node.cc	/^Node<Type>::Node(const Node<Type>& node)$/;"	f	class:Node	signature:(const Node<Type>& node)
+Node	.\node.cc	/^Node<Type>::Node(const Type& value)$/;"	f	class:Node	signature:(const Type& value)
+Node	.\node.h	/^  Node();$/;"	p	class:Node	access:public	signature:()
+Node	.\node.h	/^  Node(const Node<Type>& node);$/;"	p	class:Node	access:public	signature:(const Node<Type>& node)
+Node	.\node.h	/^  Node(const Type& value);$/;"	p	class:Node	access:public	signature:(const Type& value)
+Node	.\node.h	/^class Node$/;"	c
+Node::Node	.\node.cc	/^Node<Type>::Node()$/;"	f	class:Node	signature:()
+Node::Node	.\node.cc	/^Node<Type>::Node(const Node<Type>& node)$/;"	f	class:Node	signature:(const Node<Type>& node)
+Node::Node	.\node.cc	/^Node<Type>::Node(const Type& value)$/;"	f	class:Node	signature:(const Type& value)
+Node::Node	.\node.h	/^  Node();$/;"	p	class:Node	access:public	signature:()
+Node::Node	.\node.h	/^  Node(const Node<Type>& node);$/;"	p	class:Node	access:public	signature:(const Node<Type>& node)
+Node::Node	.\node.h	/^  Node(const Type& value);$/;"	p	class:Node	access:public	signature:(const Type& value)
+Node::next	.\node.h	/^  Node<Type>* next;$/;"	m	class:Node	access:public
+Node::val	.\node.h	/^  Type val;$/;"	m	class:Node	access:public
+Node::~Node	.\node.cc	/^Node<Type>::~Node()$/;"	f	class:Node	signature:()
+Node::~Node	.\node.h	/^  virtual ~Node();$/;"	p	class:Node	access:public	signature:()
+back	.\list.cc	/^Type List<Type>::back()$/;"	f	class:List	signature:()
+back	.\list.h	/^  Type back();$/;"	p	class:List	access:public	signature:()
+clear	.\list.cc	/^void List<Type>::clear()$/;"	f	class:List	signature:()
+clear	.\list.h	/^  void clear();$/;"	p	class:List	access:public	signature:()
+empty	.\list.cc	/^bool List<Type>::empty()$/;"	f	class:List	signature:()
+empty	.\list.h	/^  bool empty();$/;"	p	class:List	access:public	signature:()
+front	.\list.cc	/^Type List<Type>::front()$/;"	f	class:List	signature:()
+front	.\list.h	/^  Type front();$/;"	p	class:List	access:public	signature:()
+header	.\list.h	/^  Node<Type>* header;$/;"	m	class:List	access:private
+main	.\test.cc	/^int main()$/;"	f	signature:()
+next	.\node.h	/^  Node<Type>* next;$/;"	m	class:Node	access:public
+operator =	.\list.cc	/^List& List<Type>::operator=(const List<Type>& list)$/;"	f	class:List	signature:(const List<Type>& list)
+operator =	.\list.h	/^  List& operator=(const List<Type>& list);$/;"	p	class:List	access:public	signature:(const List<Type>& list)
+pop_back	.\list.cc	/^void List<Type>::pop_back()$/;"	f	class:List	signature:()
+pop_back	.\list.h	/^  void pop_back();$/;"	p	class:List	access:public	signature:()
+pop_front	.\list.cc	/^void List<Type>::pop_front()$/;"	f	class:List	signature:()
+pop_front	.\list.h	/^  void pop_front();$/;"	p	class:List	access:public	signature:()
+push_back	.\list.cc	/^void List<Type>::push_back(const Type& value)$/;"	f	class:List	signature:(const Type& value)
+push_back	.\list.h	/^  void push_back(const Type& value);$/;"	p	class:List	access:public	signature:(const Type& value)
+push_front	.\list.cc	/^void List<Type>::push_front(const Type& value)$/;"	f	class:List	signature:(const Type& value)
+push_front	.\list.h	/^  void push_front(const Type& value);$/;"	p	class:List	access:public	signature:(const Type& value)
+show	.\list.cc	/^void List<Type>::show()$/;"	f	class:List	signature:()
+show	.\list.h	/^  void show();$/;"	p	class:List	access:public	signature:()
+size	.\list.cc	/^size_t List<Type>::size()$/;"	f	class:List	signature:()
+size	.\list.h	/^  size_t size();$/;"	p	class:List	access:public	signature:()
+size	.\list.h	/^  size_t size;$/;"	m	class:List	access:private
+sort	.\list.cc	/^void List<Type>::sort()$/;"	f	class:List	signature:()
+sort	.\list.h	/^  void sort();$/;"	p	class:List	access:public	signature:()
+tail	.\list.h	/^  Node<Type>* tail;$/;"	m	class:List	access:private
+val	.\node.h	/^  Type val;$/;"	m	class:Node	access:public
+~List	.\list.cc	/^List<Type>::~List()$/;"	f	class:List	signature:()
+~List	.\list.h	/^  virtual ~List();$/;"	p	class:List	access:public	signature:()
+~Node	.\node.cc	/^Node<Type>::~Node()$/;"	f	class:Node	signature:()
+~Node	.\node.h	/^  virtual ~Node();$/;"	p	class:Node	access:public	signature:()
