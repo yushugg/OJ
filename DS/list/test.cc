@@ -1,9 +1,13 @@
 #include <iostream>
+#include <string>
 
 #include "list.h"
 
+#define TESTINT
+
 int main()
 {
+#ifdef TESTINT
   List<int> l;
   l.show();
   std::cout << "empty: " << l.empty() << std::endl;
@@ -41,6 +45,22 @@ int main()
 
   ll = l;
   ll.show();
+
+#else
+  List<std::string> strList;
+  strList.show();
+  std::cout << "empty: " << strList.empty() << std::endl;
+
+  strList.push_back(std::string("Hello world"));
+  strList.push_front(std::string("Wie geht's sie"));
+  strList.show();
+
+  strList.pop_front();
+  strList.show();
+
+  strList.clear();
+  strList.show();
+#endif
 
   return 0;
 }
