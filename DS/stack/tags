@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+STACK_H_	.\stack.h	2;"	d
+Stack	.\stack.h	/^  Stack();$/;"	p	class:Stack	access:public	signature:()
+Stack	.\stack.h	/^  Stack(const Stack<Type>& stack);$/;"	p	class:Stack	access:public	signature:(const Stack<Type>& stack)
+Stack	.\stack.h	/^Stack<Type>::Stack()$/;"	f	class:Stack	signature:()
+Stack	.\stack.h	/^Stack<Type>::Stack(const Stack<Type>& stack)$/;"	f	class:Stack	signature:(const Stack<Type>& stack)
+Stack	.\stack.h	/^class Stack$/;"	c
+Stack::Stack	.\stack.h	/^  Stack();$/;"	p	class:Stack	access:public	signature:()
+Stack::Stack	.\stack.h	/^  Stack(const Stack<Type>& stack);$/;"	p	class:Stack	access:public	signature:(const Stack<Type>& stack)
+Stack::Stack	.\stack.h	/^Stack<Type>::Stack()$/;"	f	class:Stack	signature:()
+Stack::Stack	.\stack.h	/^Stack<Type>::Stack(const Stack<Type>& stack)$/;"	f	class:Stack	signature:(const Stack<Type>& stack)
+Stack::capacity	.\stack.h	/^  size_t capacity;$/;"	m	class:Stack	access:private
+Stack::clear	.\stack.h	/^  void clear();$/;"	p	class:Stack	access:public	signature:()
+Stack::clear	.\stack.h	/^void Stack<Type>::clear()$/;"	f	class:Stack	signature:()
+Stack::cur	.\stack.h	/^  size_t cur;$/;"	m	class:Stack	access:private
+Stack::data	.\stack.h	/^  Type* data;$/;"	m	class:Stack	access:private
+Stack::empty	.\stack.h	/^  bool empty();$/;"	p	class:Stack	access:public	signature:()
+Stack::empty	.\stack.h	/^bool Stack<Type>::empty()$/;"	f	class:Stack	signature:()
+Stack::length	.\stack.h	/^  size_t length;$/;"	m	class:Stack	access:private
+Stack::operator =	.\stack.h	/^  Stack<Type>& operator=(const Stack<Type>& stack);$/;"	p	class:Stack	access:public	signature:(const Stack<Type>& stack)
+Stack::pop	.\stack.h	/^  void pop();$/;"	p	class:Stack	access:public	signature:()
+Stack::pop	.\stack.h	/^void Stack<Type>::pop()$/;"	f	class:Stack	signature:()
+Stack::push	.\stack.h	/^  void push(const Type& value);$/;"	p	class:Stack	access:public	signature:(const Type& value)
+Stack::push	.\stack.h	/^void Stack<Type>::push(const Type& value)$/;"	f	class:Stack	signature:(const Type& value)
+Stack::size	.\stack.h	/^  size_t size();$/;"	p	class:Stack	access:public	signature:()
+Stack::size	.\stack.h	/^size_t Stack<Type>::size()$/;"	f	class:Stack	signature:()
+Stack::top	.\stack.h	/^  Type top();$/;"	p	class:Stack	access:public	signature:()
+Stack::top	.\stack.h	/^Type Stack<Type>::top()$/;"	f	class:Stack	signature:()
+Stack::~Stack	.\stack.h	/^  virtual ~Stack();$/;"	p	class:Stack	access:public	signature:()
+Stack::~Stack	.\stack.h	/^Stack<Type>::~Stack()$/;"	f	class:Stack	signature:()
+capacity	.\stack.h	/^  size_t capacity;$/;"	m	class:Stack	access:private
+clear	.\stack.h	/^  void clear();$/;"	p	class:Stack	access:public	signature:()
+clear	.\stack.h	/^void Stack<Type>::clear()$/;"	f	class:Stack	signature:()
+cur	.\stack.h	/^  size_t cur;$/;"	m	class:Stack	access:private
+data	.\stack.h	/^  Type* data;$/;"	m	class:Stack	access:private
+empty	.\stack.h	/^  bool empty();$/;"	p	class:Stack	access:public	signature:()
+empty	.\stack.h	/^bool Stack<Type>::empty()$/;"	f	class:Stack	signature:()
+length	.\stack.h	/^  size_t length;$/;"	m	class:Stack	access:private
+main	.\test.cc	/^int main()$/;"	f	signature:()
+operator =	.\stack.h	/^  Stack<Type>& operator=(const Stack<Type>& stack);$/;"	p	class:Stack	access:public	signature:(const Stack<Type>& stack)
+pop	.\stack.h	/^  void pop();$/;"	p	class:Stack	access:public	signature:()
+pop	.\stack.h	/^void Stack<Type>::pop()$/;"	f	class:Stack	signature:()
+push	.\stack.h	/^  void push(const Type& value);$/;"	p	class:Stack	access:public	signature:(const Type& value)
+push	.\stack.h	/^void Stack<Type>::push(const Type& value)$/;"	f	class:Stack	signature:(const Type& value)
+size	.\stack.h	/^  size_t size();$/;"	p	class:Stack	access:public	signature:()
+size	.\stack.h	/^size_t Stack<Type>::size()$/;"	f	class:Stack	signature:()
+top	.\stack.h	/^  Type top();$/;"	p	class:Stack	access:public	signature:()
+top	.\stack.h	/^Type Stack<Type>::top()$/;"	f	class:Stack	signature:()
+~Stack	.\stack.h	/^  virtual ~Stack();$/;"	p	class:Stack	access:public	signature:()
+~Stack	.\stack.h	/^Stack<Type>::~Stack()$/;"	f	class:Stack	signature:()
