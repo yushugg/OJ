@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Capacity	.\heap.h	/^  enum { Capacity = 100 };$/;"	e	enum:Heap::__anon1
+HEAP_H_	.\heap.h	2;"	d
+Heap	.\heap.cc	/^Heap::Heap()$/;"	f	class:Heap	signature:()
+Heap	.\heap.cc	/^Heap::Heap(const Heap& heap)$/;"	f	class:Heap	signature:(const Heap& heap)
+Heap	.\heap.h	/^  Heap();$/;"	p	class:Heap	access:public	signature:()
+Heap	.\heap.h	/^  Heap(const Heap& heap);$/;"	p	class:Heap	access:public	signature:(const Heap& heap)
+Heap	.\heap.h	/^class Heap$/;"	c
+Heap::Capacity	.\heap.h	/^  enum { Capacity = 100 };$/;"	e	enum:Heap::__anon1
+Heap::Heap	.\heap.cc	/^Heap::Heap()$/;"	f	class:Heap	signature:()
+Heap::Heap	.\heap.cc	/^Heap::Heap(const Heap& heap)$/;"	f	class:Heap	signature:(const Heap& heap)
+Heap::Heap	.\heap.h	/^  Heap();$/;"	p	class:Heap	access:public	signature:()
+Heap::Heap	.\heap.h	/^  Heap(const Heap& heap);$/;"	p	class:Heap	access:public	signature:(const Heap& heap)
+Heap::Min	.\heap.h	/^  static const int Min = -1000000;$/;"	m	class:Heap	access:private
+Heap::build	.\heap.cc	/^void Heap::build(int values[], int length)$/;"	f	class:Heap	signature:(int values[], int length)
+Heap::build	.\heap.h	/^  void build(int values[], int length);$/;"	p	class:Heap	access:public	signature:(int values[], int length)
+Heap::deleteMin	.\heap.cc	/^int Heap::deleteMin()$/;"	f	class:Heap	signature:()
+Heap::deleteMin	.\heap.h	/^  int deleteMin();$/;"	p	class:Heap	access:public	signature:()
+Heap::elements	.\heap.h	/^  int elements[Capacity];$/;"	m	class:Heap	access:private
+Heap::empty	.\heap.cc	/^bool Heap::empty()$/;"	f	class:Heap	signature:()
+Heap::empty	.\heap.h	/^  bool empty();$/;"	p	class:Heap	access:public	signature:()
+Heap::insert	.\heap.cc	/^void Heap::insert(int val)$/;"	f	class:Heap	signature:(int val)
+Heap::insert	.\heap.h	/^  void insert(int val);$/;"	p	class:Heap	access:public	signature:(int val)
+Heap::operator =	.\heap.cc	/^Heap& Heap::operator=(const Heap& heap)$/;"	f	class:Heap	signature:(const Heap& heap)
+Heap::operator =	.\heap.h	/^  Heap& operator=(const Heap& heap);$/;"	p	class:Heap	access:public	signature:(const Heap& heap)
+Heap::show	.\heap.cc	/^void Heap::show()$/;"	f	class:Heap	signature:()
+Heap::show	.\heap.h	/^  void show();$/;"	p	class:Heap	access:public	signature:()
+Heap::size	.\heap.h	/^  size_t size;$/;"	m	class:Heap	access:private
+Heap::~Heap	.\heap.cc	/^Heap::~Heap()$/;"	f	class:Heap	signature:()
+Heap::~Heap	.\heap.h	/^  virtual ~Heap();$/;"	p	class:Heap	access:public	signature:()
+Min	.\heap.h	/^  static const int Min = -1000000;$/;"	m	class:Heap	access:private
+build	.\heap.cc	/^void Heap::build(int values[], int length)$/;"	f	class:Heap	signature:(int values[], int length)
+build	.\heap.h	/^  void build(int values[], int length);$/;"	p	class:Heap	access:public	signature:(int values[], int length)
+deleteMin	.\heap.cc	/^int Heap::deleteMin()$/;"	f	class:Heap	signature:()
+deleteMin	.\heap.h	/^  int deleteMin();$/;"	p	class:Heap	access:public	signature:()
+elements	.\heap.h	/^  int elements[Capacity];$/;"	m	class:Heap	access:private
+empty	.\heap.cc	/^bool Heap::empty()$/;"	f	class:Heap	signature:()
+empty	.\heap.h	/^  bool empty();$/;"	p	class:Heap	access:public	signature:()
+insert	.\heap.cc	/^void Heap::insert(int val)$/;"	f	class:Heap	signature:(int val)
+insert	.\heap.h	/^  void insert(int val);$/;"	p	class:Heap	access:public	signature:(int val)
+main	.\test.cc	/^int main()$/;"	f	signature:()
+operator =	.\heap.cc	/^Heap& Heap::operator=(const Heap& heap)$/;"	f	class:Heap	signature:(const Heap& heap)
+operator =	.\heap.h	/^  Heap& operator=(const Heap& heap);$/;"	p	class:Heap	access:public	signature:(const Heap& heap)
+show	.\heap.cc	/^void Heap::show()$/;"	f	class:Heap	signature:()
+show	.\heap.h	/^  void show();$/;"	p	class:Heap	access:public	signature:()
+size	.\heap.h	/^  size_t size;$/;"	m	class:Heap	access:private
+~Heap	.\heap.cc	/^Heap::~Heap()$/;"	f	class:Heap	signature:()
+~Heap	.\heap.h	/^  virtual ~Heap();$/;"	p	class:Heap	access:public	signature:()
