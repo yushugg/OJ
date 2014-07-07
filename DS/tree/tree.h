@@ -85,6 +85,7 @@ void Tree<Type>::freeNode(Node<Type>* node)
     freeNode(node->left);
     freeNode(node->right);
     delete node;
+    node = NULL;
   }
 }
 
@@ -167,7 +168,7 @@ Node<Type>* Tree<Type>::delNode(Node<Type>* node, const Type& val)
     node->value = temp->value;
     node->right = delNode(node->right, temp->value);
   }
-  // One or zero children
+  // One or zero child
   else
   {
     Node<Type>* temp = node;
@@ -184,7 +185,7 @@ Node<Type>* Tree<Type>::delNode(Node<Type>* node, const Type& val)
 template<class Type>
 void Tree<Type>::del(const Type& val)
 {
-  delNode(root, val);
+  root = delNode(root, val);
 }
 
 template<class Type>
@@ -192,7 +193,7 @@ void Tree<Type>::preOrder(Node<Type>* node)
 {
   if (node)
   {
-    std::cout << node->value << " " << std::endl;
+    std::cout << node->value << " ";
     preOrder(node->left);
     preOrder(node->right);
   }
@@ -204,7 +205,7 @@ void Tree<Type>::inOrder(Node<Type>* node)
   if (node)
   {
     inOrder(node->left);
-    std::cout << node->value << " " << std::endl;
+    std::cout << node->value << " ";
     inOrder(node->right);
   }
 }
@@ -216,7 +217,7 @@ void Tree<Type>::postOrder(Node<Type>* node)
   {
     postOrder(node->left);
     postOrder(node->right);
-    std::cout << node->value << " " << std::endl;
+    std::cout << node->value << " ";
   }
 }
 
@@ -225,6 +226,7 @@ void Tree<Type>::preOrderTraversal()
 {
   std::cout << "Pre-Order: " << std::endl;
   preOrder(root);
+  std::cout << std::endl;
 }
 
 template<class Type>
@@ -232,6 +234,7 @@ void Tree<Type>::inOrderTraversal()
 {
   std::cout << "In-Order: " << std::endl;
   inOrder(root);
+  std::cout << std::endl;
 }
 
 template<class Type>
@@ -239,6 +242,7 @@ void Tree<Type>::postOrderTraversal()
 {
   std::cout << "Post-Order: " << std::endl;
   postOrder(root);
+  std::cout << std::endl;
 }
 
 template<class Type>
@@ -250,7 +254,7 @@ Tree<Type>& Tree<Type>::operator=(const Tree<Type>& tree)
 
   // Clear
   freeNode(root);
-  copyNode(root, tree.root);
+  root = copyNode(root, tree.root);
   return *this;
 }
 
