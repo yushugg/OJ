@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DISJOINT_SET_H_	.\disjoint_set.h	2;"	d
+DisjointSet	.\disjoint_set.cc	/^DisjointSet::DisjointSet()$/;"	f	class:DisjointSet	signature:()
+DisjointSet	.\disjoint_set.cc	/^DisjointSet::DisjointSet(const DisjointSet& disjSet)$/;"	f	class:DisjointSet	signature:(const DisjointSet& disjSet)
+DisjointSet	.\disjoint_set.cc	/^DisjointSet::DisjointSet(int length)$/;"	f	class:DisjointSet	signature:(int length)
+DisjointSet	.\disjoint_set.h	/^  DisjointSet();$/;"	p	class:DisjointSet	access:public	signature:()
+DisjointSet	.\disjoint_set.h	/^  DisjointSet(const DisjointSet& disjSet);$/;"	p	class:DisjointSet	access:public	signature:(const DisjointSet& disjSet)
+DisjointSet	.\disjoint_set.h	/^  DisjointSet(int length);$/;"	p	class:DisjointSet	access:public	signature:(int length)
+DisjointSet	.\disjoint_set.h	/^class DisjointSet$/;"	c
+DisjointSet::DisjointSet	.\disjoint_set.cc	/^DisjointSet::DisjointSet()$/;"	f	class:DisjointSet	signature:()
+DisjointSet::DisjointSet	.\disjoint_set.cc	/^DisjointSet::DisjointSet(const DisjointSet& disjSet)$/;"	f	class:DisjointSet	signature:(const DisjointSet& disjSet)
+DisjointSet::DisjointSet	.\disjoint_set.cc	/^DisjointSet::DisjointSet(int length)$/;"	f	class:DisjointSet	signature:(int length)
+DisjointSet::DisjointSet	.\disjoint_set.h	/^  DisjointSet();$/;"	p	class:DisjointSet	access:public	signature:()
+DisjointSet::DisjointSet	.\disjoint_set.h	/^  DisjointSet(const DisjointSet& disjSet);$/;"	p	class:DisjointSet	access:public	signature:(const DisjointSet& disjSet)
+DisjointSet::DisjointSet	.\disjoint_set.h	/^  DisjointSet(int length);$/;"	p	class:DisjointSet	access:public	signature:(int length)
+DisjointSet::find	.\disjoint_set.cc	/^int DisjointSet::find(int x)$/;"	f	class:DisjointSet	signature:(int x)
+DisjointSet::find	.\disjoint_set.h	/^  int find(int x);$/;"	p	class:DisjointSet	access:public	signature:(int x)
+DisjointSet::operator =	.\disjoint_set.cc	/^DisjointSet& DisjointSet::operator=(const DisjointSet& disjSet)$/;"	f	class:DisjointSet	signature:(const DisjointSet& disjSet)
+DisjointSet::operator =	.\disjoint_set.h	/^  DisjointSet& operator=(const DisjointSet& disjSet);$/;"	p	class:DisjointSet	access:public	signature:(const DisjointSet& disjSet)
+DisjointSet::sUnion	.\disjoint_set.cc	/^void DisjointSet::sUnion(int root1, int root2)$/;"	f	class:DisjointSet	signature:(int root1, int root2)
+DisjointSet::sUnion	.\disjoint_set.h	/^  void sUnion(int root1, int root2);$/;"	p	class:DisjointSet	access:private	signature:(int root1, int root2)
+DisjointSet::set	.\disjoint_set.h	/^  int* set;$/;"	m	class:DisjointSet	access:private
+DisjointSet::setUnion	.\disjoint_set.cc	/^void DisjointSet::setUnion(int root1, int root2)$/;"	f	class:DisjointSet	signature:(int root1, int root2)
+DisjointSet::setUnion	.\disjoint_set.h	/^  void setUnion(int root1, int root2);$/;"	p	class:DisjointSet	access:public	signature:(int root1, int root2)
+DisjointSet::show	.\disjoint_set.cc	/^void DisjointSet::show()$/;"	f	class:DisjointSet	signature:()
+DisjointSet::show	.\disjoint_set.h	/^  void show();$/;"	p	class:DisjointSet	access:public	signature:()
+DisjointSet::size	.\disjoint_set.h	/^  int size;$/;"	m	class:DisjointSet	access:private
+DisjointSet::~DisjointSet	.\disjoint_set.cc	/^DisjointSet::~DisjointSet()$/;"	f	class:DisjointSet	signature:()
+DisjointSet::~DisjointSet	.\disjoint_set.h	/^  virtual ~DisjointSet();$/;"	p	class:DisjointSet	access:public	signature:()
+find	.\disjoint_set.cc	/^int DisjointSet::find(int x)$/;"	f	class:DisjointSet	signature:(int x)
+find	.\disjoint_set.h	/^  int find(int x);$/;"	p	class:DisjointSet	access:public	signature:(int x)
+main	.\test.cc	/^int main()$/;"	f	signature:()
+operator =	.\disjoint_set.cc	/^DisjointSet& DisjointSet::operator=(const DisjointSet& disjSet)$/;"	f	class:DisjointSet	signature:(const DisjointSet& disjSet)
+operator =	.\disjoint_set.h	/^  DisjointSet& operator=(const DisjointSet& disjSet);$/;"	p	class:DisjointSet	access:public	signature:(const DisjointSet& disjSet)
+sUnion	.\disjoint_set.cc	/^void DisjointSet::sUnion(int root1, int root2)$/;"	f	class:DisjointSet	signature:(int root1, int root2)
+sUnion	.\disjoint_set.h	/^  void sUnion(int root1, int root2);$/;"	p	class:DisjointSet	access:private	signature:(int root1, int root2)
+set	.\disjoint_set.h	/^  int* set;$/;"	m	class:DisjointSet	access:private
+setUnion	.\disjoint_set.cc	/^void DisjointSet::setUnion(int root1, int root2)$/;"	f	class:DisjointSet	signature:(int root1, int root2)
+setUnion	.\disjoint_set.h	/^  void setUnion(int root1, int root2);$/;"	p	class:DisjointSet	access:public	signature:(int root1, int root2)
+show	.\disjoint_set.cc	/^void DisjointSet::show()$/;"	f	class:DisjointSet	signature:()
+show	.\disjoint_set.h	/^  void show();$/;"	p	class:DisjointSet	access:public	signature:()
+size	.\disjoint_set.h	/^  int size;$/;"	m	class:DisjointSet	access:private
+~DisjointSet	.\disjoint_set.cc	/^DisjointSet::~DisjointSet()$/;"	f	class:DisjointSet	signature:()
+~DisjointSet	.\disjoint_set.h	/^  virtual ~DisjointSet();$/;"	p	class:DisjointSet	access:public	signature:()
