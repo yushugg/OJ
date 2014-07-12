@@ -27,6 +27,11 @@ Graph::Graph(size_t num)
   for (size_t i = 0; i != numOfVertices; ++i)
     indegrees[i] = 0;
 
+  // Visited
+  visited = new bool[numOfVertices];
+  for (size_t i = 0; i != numOfVertices; ++i)
+    visited[i] = false;
+
   std::cout << "Construct a graph, vertices number is: " << numOfVertices << std::endl;
 }
 
@@ -36,6 +41,11 @@ Graph::Graph(const Graph& g)
   indegrees = new int[g.numOfVertices];
   for (size_t i = 0; i != g.numOfVertices; ++i)
     indegrees[i] = g.indegrees[i];
+
+  // Visited
+  visited = new bool[g.numOfVertices];
+  for (size_t i = 0; i != g.numOfVertices; ++i)
+    visited[i] = g.visited[i];
 
   // Allocate memory
   numOfVertices = g.numOfVertices;
@@ -72,6 +82,9 @@ Graph::~Graph()
 
   // Indegrees
   delete[] indegrees;
+
+  // Visited
+  delete[] visited;
 
   std::cout << "Destroy a graph, vertices number is: " << numOfVertices << std::endl;
 
@@ -118,6 +131,13 @@ void Graph::showIndegrees()
     std::cout << i << ": " << indegrees[i] << std::endl;
 }
 
+void Graph::showVisited()
+{
+  std::cout << "Visited: " << std::endl;
+  for (size_t i = 0; i != numOfVertices; ++i)
+    std::cout << i << ": " << visited[i] << std::endl;
+}
+
 void Graph::topologicalSort()
 {
   // Copy indegrees
@@ -141,7 +161,7 @@ void Graph::topologicalSort()
     ++count;
 
     std::list<int>::iterator iter = verticesList[top].begin();
-    for (++iter ; iter != verticesList[top].end(); ++iter)
+    for (++iter; iter != verticesList[top].end(); ++iter)
     {
       if (--in[*iter] == 0)
         q.push(*iter);
@@ -153,6 +173,43 @@ void Graph::topologicalSort()
   std::cout << std::endl;
 
   delete[] in;
+}
+
+void Graph::DFS(size_t vertex)
+{
+  visited[vertex] = true;
+  std::cout << vertex << "->";
+  std::list<int>::iterator iter = verticesList[vertex].begin();
+  for (++iter; iter != verticesList[vertex].end(); ++iter)
+  {
+    if (!visited[*iter])
+      DFS(*iter);
+  }
+}
+
+void Graph::BFS(size_t vertex)
+{
+  for (size_t i = 0; i != numOfVertices; ++i)
+    visited[i] = false;
+  std::queue<size_t> q;
+  q.push(vertex);
+
+  while (!q.empty())
+  {
+    size_t top = q.front();
+    q.pop();
+
+    std::cout << top << "->";
+    std::list<int>::iterator iter = verticesList[top].begin();
+    for (++iter; iter != verticesList[top].end(); ++iter)
+    {
+      if (!visited[*iter])
+      {
+        q.push(*iter);
+        visited[*iter] = true;
+      }
+    }
+  }
 }
 
 Graph& Graph::operator=(const Graph& g)
@@ -170,6 +227,8 @@ Graph& Graph::operator=(const Graph& g)
   delete[] verticesList;
   // Indegrees
   delete[] indegrees;
+  // Visited
+  delete[] visited;
 
   // Allocate memory
   numOfVertices = g.numOfVertices;
@@ -180,6 +239,8 @@ Graph& Graph::operator=(const Graph& g)
   verticesList = new std::list<int>[g.numOfVertices];
   // Indegrees
   indegrees = new int[g.numOfVertices];
+  // Visited
+  visited = new bool[g.numOfVertices];
 
   // Assign
   for (size_t i = 0; i != numOfVertices; ++i)
@@ -194,6 +255,9 @@ Graph& Graph::operator=(const Graph& g)
   // Indegrees
   for (size_t i = 0; i != numOfVertices; ++i)
     indegrees[i] = g.indegrees[i];
+  // Visited
+  for (size_t i = 0; i != numOfVertices; ++i)
+    visited[i] = g.visited[i];
 
   std::cout << "Assign a graph, vertices number is: " << numOfVertices << std::endl;
 

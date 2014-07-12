@@ -10,6 +10,7 @@ private:
   int** vertices;
   std::list<int>* verticesList;
   int* indegrees;
+  bool* visited;
 
 public:
   Graph(size_t num);
@@ -21,9 +22,12 @@ public:
   void showMatrix();
   void showList();
   void showIndegrees();
+  void showVisited();
 
 public:
   void topologicalSort();
+  void DFS(size_t vertex);
+  void BFS(size_t vertex);
 
 public:
   Graph& operator=(const Graph& g);

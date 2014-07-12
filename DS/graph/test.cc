@@ -26,6 +26,13 @@ int main()
   g.showList();
   g.showIndegrees();
   g.topologicalSort();
+  g.showVisited();
+  std::cout << "DFS: " << std::endl;
+  g.DFS(0);
+  std::cout << std::endl;
+  std::cout << "BFS: " << std::endl;
+  g.BFS(0);
+  std::cout << std::endl;
 
   Graph g2 = g;
   g2.setEdge(1, 6);
@@ -33,12 +40,14 @@ int main()
   g2.showList();
   g2.showIndegrees();
   g2.topologicalSort();
+  g2.showVisited();
 
   g2 = g;
   g2.showMatrix();
   g2.showList();
   g2.showIndegrees();
   g2.topologicalSort();
+  g2.showVisited();
 
   return 0;
 }

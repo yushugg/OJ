@@ -4,12 +4,20 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+BFS	.\graph.cc	/^void Graph::BFS(size_t vertex)$/;"	f	class:Graph	signature:(size_t vertex)
+BFS	.\graph.h	/^  void BFS(size_t vertex);$/;"	p	class:Graph	access:public	signature:(size_t vertex)
+DFS	.\graph.cc	/^void Graph::DFS(size_t vertex)$/;"	f	class:Graph	signature:(size_t vertex)
+DFS	.\graph.h	/^  void DFS(size_t vertex);$/;"	p	class:Graph	access:public	signature:(size_t vertex)
 GRAPH_H_	.\graph.h	2;"	d
 Graph	.\graph.cc	/^Graph::Graph(const Graph& g)$/;"	f	class:Graph	signature:(const Graph& g)
 Graph	.\graph.cc	/^Graph::Graph(size_t num)$/;"	f	class:Graph	signature:(size_t num)
 Graph	.\graph.h	/^  Graph(const Graph& g);$/;"	p	class:Graph	access:public	signature:(const Graph& g)
 Graph	.\graph.h	/^  Graph(size_t num);$/;"	p	class:Graph	access:public	signature:(size_t num)
 Graph	.\graph.h	/^class Graph$/;"	c
+Graph::BFS	.\graph.cc	/^void Graph::BFS(size_t vertex)$/;"	f	class:Graph	signature:(size_t vertex)
+Graph::BFS	.\graph.h	/^  void BFS(size_t vertex);$/;"	p	class:Graph	access:public	signature:(size_t vertex)
+Graph::DFS	.\graph.cc	/^void Graph::DFS(size_t vertex)$/;"	f	class:Graph	signature:(size_t vertex)
+Graph::DFS	.\graph.h	/^  void DFS(size_t vertex);$/;"	p	class:Graph	access:public	signature:(size_t vertex)
 Graph::Graph	.\graph.cc	/^Graph::Graph(const Graph& g)$/;"	f	class:Graph	signature:(const Graph& g)
 Graph::Graph	.\graph.cc	/^Graph::Graph(size_t num)$/;"	f	class:Graph	signature:(size_t num)
 Graph::Graph	.\graph.h	/^  Graph(const Graph& g);$/;"	p	class:Graph	access:public	signature:(const Graph& g)
@@ -26,10 +34,13 @@ Graph::showList	.\graph.cc	/^void Graph::showList()$/;"	f	class:Graph	signature:
 Graph::showList	.\graph.h	/^  void showList();$/;"	p	class:Graph	access:public	signature:()
 Graph::showMatrix	.\graph.cc	/^void Graph::showMatrix()$/;"	f	class:Graph	signature:()
 Graph::showMatrix	.\graph.h	/^  void showMatrix();$/;"	p	class:Graph	access:public	signature:()
+Graph::showVisited	.\graph.cc	/^void Graph::showVisited()$/;"	f	class:Graph	signature:()
+Graph::showVisited	.\graph.h	/^  void showVisited();$/;"	p	class:Graph	access:public	signature:()
 Graph::topologicalSort	.\graph.cc	/^void Graph::topologicalSort()$/;"	f	class:Graph	signature:()
 Graph::topologicalSort	.\graph.h	/^  void topologicalSort();$/;"	p	class:Graph	access:public	signature:()
 Graph::vertices	.\graph.h	/^  int** vertices;$/;"	m	class:Graph	access:private
 Graph::verticesList	.\graph.h	/^  std::list<int>* verticesList;$/;"	m	class:Graph	access:private
+Graph::visited	.\graph.h	/^  bool* visited;$/;"	m	class:Graph	access:private
 Graph::~Graph	.\graph.cc	/^Graph::~Graph()$/;"	f	class:Graph	signature:()
 Graph::~Graph	.\graph.h	/^  virtual ~Graph();$/;"	p	class:Graph	access:public	signature:()
 indegrees	.\graph.h	/^  int* indegrees;$/;"	m	class:Graph	access:private
@@ -45,9 +56,12 @@ showList	.\graph.cc	/^void Graph::showList()$/;"	f	class:Graph	signature:()
 showList	.\graph.h	/^  void showList();$/;"	p	class:Graph	access:public	signature:()
 showMatrix	.\graph.cc	/^void Graph::showMatrix()$/;"	f	class:Graph	signature:()
 showMatrix	.\graph.h	/^  void showMatrix();$/;"	p	class:Graph	access:public	signature:()
+showVisited	.\graph.cc	/^void Graph::showVisited()$/;"	f	class:Graph	signature:()
+showVisited	.\graph.h	/^  void showVisited();$/;"	p	class:Graph	access:public	signature:()
 topologicalSort	.\graph.cc	/^void Graph::topologicalSort()$/;"	f	class:Graph	signature:()
 topologicalSort	.\graph.h	/^  void topologicalSort();$/;"	p	class:Graph	access:public	signature:()
 vertices	.\graph.h	/^  int** vertices;$/;"	m	class:Graph	access:private
 verticesList	.\graph.h	/^  std::list<int>* verticesList;$/;"	m	class:Graph	access:private
+visited	.\graph.h	/^  bool* visited;$/;"	m	class:Graph	access:private
 ~Graph	.\graph.cc	/^Graph::~Graph()$/;"	f	class:Graph	signature:()
 ~Graph	.\graph.h	/^  virtual ~Graph();$/;"	p	class:Graph	access:public	signature:()
