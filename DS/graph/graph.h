@@ -9,6 +9,7 @@ private:
   size_t numOfVertices;
   int** vertices;
   std::list<int>* verticesList;
+  int* indegrees;
 
 public:
   Graph(size_t num);
@@ -19,6 +20,10 @@ public:
   void setEdge(size_t vertex1, size_t vertex2, int weight = 1);
   void showMatrix();
   void showList();
+  void showIndegrees();
+
+public:
+  void topologicalSort();
 
 public:
   Graph& operator=(const Graph& g);

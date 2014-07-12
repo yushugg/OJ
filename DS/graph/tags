@@ -14,29 +14,39 @@ Graph::Graph	.\graph.cc	/^Graph::Graph(const Graph& g)$/;"	f	class:Graph	signatu
 Graph::Graph	.\graph.cc	/^Graph::Graph(size_t num)$/;"	f	class:Graph	signature:(size_t num)
 Graph::Graph	.\graph.h	/^  Graph(const Graph& g);$/;"	p	class:Graph	access:public	signature:(const Graph& g)
 Graph::Graph	.\graph.h	/^  Graph(size_t num);$/;"	p	class:Graph	access:public	signature:(size_t num)
+Graph::indegrees	.\graph.h	/^  int* indegrees;$/;"	m	class:Graph	access:private
 Graph::numOfVertices	.\graph.h	/^  size_t numOfVertices;$/;"	m	class:Graph	access:private
 Graph::operator =	.\graph.cc	/^Graph& Graph::operator=(const Graph& g)$/;"	f	class:Graph	signature:(const Graph& g)
 Graph::operator =	.\graph.h	/^  Graph& operator=(const Graph& g);$/;"	p	class:Graph	access:public	signature:(const Graph& g)
 Graph::setEdge	.\graph.cc	/^void Graph::setEdge(size_t vertex1, size_t vertex2, int weight)$/;"	f	class:Graph	signature:(size_t vertex1, size_t vertex2, int weight)
 Graph::setEdge	.\graph.h	/^  void setEdge(size_t vertex1, size_t vertex2, int weight = 1);$/;"	p	class:Graph	access:public	signature:(size_t vertex1, size_t vertex2, int weight = 1)
+Graph::showIndegrees	.\graph.cc	/^void Graph::showIndegrees()$/;"	f	class:Graph	signature:()
+Graph::showIndegrees	.\graph.h	/^  void showIndegrees();$/;"	p	class:Graph	access:public	signature:()
+Graph::showList	.\graph.cc	/^void Graph::showList()$/;"	f	class:Graph	signature:()
 Graph::showList	.\graph.h	/^  void showList();$/;"	p	class:Graph	access:public	signature:()
 Graph::showMatrix	.\graph.cc	/^void Graph::showMatrix()$/;"	f	class:Graph	signature:()
 Graph::showMatrix	.\graph.h	/^  void showMatrix();$/;"	p	class:Graph	access:public	signature:()
+Graph::topologicalSort	.\graph.cc	/^void Graph::topologicalSort()$/;"	f	class:Graph	signature:()
+Graph::topologicalSort	.\graph.h	/^  void topologicalSort();$/;"	p	class:Graph	access:public	signature:()
 Graph::vertices	.\graph.h	/^  int** vertices;$/;"	m	class:Graph	access:private
 Graph::verticesList	.\graph.h	/^  std::list<int>* verticesList;$/;"	m	class:Graph	access:private
 Graph::~Graph	.\graph.cc	/^Graph::~Graph()$/;"	f	class:Graph	signature:()
 Graph::~Graph	.\graph.h	/^  virtual ~Graph();$/;"	p	class:Graph	access:public	signature:()
-TOPOLOGICAL_SORT_H_	.\topological_sort.h	2;"	d
-TopologicalSort	.\topological_sort.h	/^class TopologicalSort$/;"	c
+indegrees	.\graph.h	/^  int* indegrees;$/;"	m	class:Graph	access:private
 main	.\test.cc	/^int main()$/;"	f	signature:()
 numOfVertices	.\graph.h	/^  size_t numOfVertices;$/;"	m	class:Graph	access:private
 operator =	.\graph.cc	/^Graph& Graph::operator=(const Graph& g)$/;"	f	class:Graph	signature:(const Graph& g)
 operator =	.\graph.h	/^  Graph& operator=(const Graph& g);$/;"	p	class:Graph	access:public	signature:(const Graph& g)
 setEdge	.\graph.cc	/^void Graph::setEdge(size_t vertex1, size_t vertex2, int weight)$/;"	f	class:Graph	signature:(size_t vertex1, size_t vertex2, int weight)
 setEdge	.\graph.h	/^  void setEdge(size_t vertex1, size_t vertex2, int weight = 1);$/;"	p	class:Graph	access:public	signature:(size_t vertex1, size_t vertex2, int weight = 1)
+showIndegrees	.\graph.cc	/^void Graph::showIndegrees()$/;"	f	class:Graph	signature:()
+showIndegrees	.\graph.h	/^  void showIndegrees();$/;"	p	class:Graph	access:public	signature:()
+showList	.\graph.cc	/^void Graph::showList()$/;"	f	class:Graph	signature:()
 showList	.\graph.h	/^  void showList();$/;"	p	class:Graph	access:public	signature:()
 showMatrix	.\graph.cc	/^void Graph::showMatrix()$/;"	f	class:Graph	signature:()
 showMatrix	.\graph.h	/^  void showMatrix();$/;"	p	class:Graph	access:public	signature:()
+topologicalSort	.\graph.cc	/^void Graph::topologicalSort()$/;"	f	class:Graph	signature:()
+topologicalSort	.\graph.h	/^  void topologicalSort();$/;"	p	class:Graph	access:public	signature:()
 vertices	.\graph.h	/^  int** vertices;$/;"	m	class:Graph	access:private
 verticesList	.\graph.h	/^  std::list<int>* verticesList;$/;"	m	class:Graph	access:private
 ~Graph	.\graph.cc	/^Graph::~Graph()$/;"	f	class:Graph	signature:()

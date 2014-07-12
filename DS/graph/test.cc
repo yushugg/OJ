@@ -24,15 +24,21 @@ int main()
 
   g.showMatrix();
   g.showList();
+  g.showIndegrees();
+  g.topologicalSort();
 
   Graph g2 = g;
   g2.setEdge(1, 6);
   g2.showMatrix();
   g2.showList();
+  g2.showIndegrees();
+  g2.topologicalSort();
 
   g2 = g;
   g2.showMatrix();
   g2.showList();
+  g2.showIndegrees();
+  g2.topologicalSort();
 
   return 0;
 }
