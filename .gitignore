@@ -23,3 +23,6 @@
 
 # Input file
 pat_basic/in.txt
+
+# Mac file
+*.DS_Store
