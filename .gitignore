@@ -22,7 +22,8 @@
 *.stackdump
 
 # Input file
-pat_basic/in.txt
+in.txt
 
 # Mac file
 *.DS_Store
+*.dSYM/
