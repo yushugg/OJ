@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstring>
 #include <vector>
+#include <stack>
 
 struct Node
 {
@@ -24,6 +25,7 @@ int main()
 {
   freopen("in.txt", "r", stdin);
 
+  std::stack<int> nodeStack;
   int N;
   scanf("%d", &N);
 
@@ -37,13 +39,14 @@ int main()
   root->parent = NULL;
   root->left = NULL;
   root->right = NULL;
+  nodeStack.push(root->val);
 
   Node* previous = root;
-  // Insert at left
-  bool isLeft = true;
-  bool mustPop = true;
 
-  for (int i = 0; i < N * 2; ++i)
+  bool addToLeft = true;
+  bool isLeft = true;
+
+  for (int i = 0; i < N * 2 - 1; ++i)
   {
     scanf("%s", action);
     
@@ -56,27 +59,30 @@ int main()
       p->parent = previous;
       p->left = NULL;
       p->right = NULL;
-      if (isLeft)
+      nodeStack.push(value);
+
+      if (addToLeft)
       {
         previous->left = p;
-        mustPop = false;
+        isLeft = true;
       }
       else
       {
         previous->right = p;
-        mustPop = true;
+        isLeft = false;
       }
-      isLeft = true;
+
+      addToLeft = true;
 
       previous = p;
     }
     else
     {
-      if (mustPop)
+      addToLeft = false;
+      int val = nodeStack.top();
+      nodeStack.pop();
+      if (!isLeft || previous->val != val)
         previous = previous->parent;
-      else
-        mustPop = true;
-      isLeft = false;
     }
   }
 
