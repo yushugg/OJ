@@ -34,19 +34,16 @@ int main()
       return strcmp(pi1.name, pi2.name) < 0;
   });
 
-  // Erase exceed 100
-  int currentAge = people[0].age;
-  int count = 0;
-  for (std::vector<PersonInfo>::iterator iter = people.begin(); iter != people.end(); ++iter)
+  int len = 0;
+  int b[20005];
+  int c[205];
+  for (int i = 0; i < numOfPeople; ++i)
   {
-    if (iter->age != currentAge)
+    if (c[people[i].age] <= 100)
     {
-      currentAge = iter->age;
-      count = 0;
+      b[len++] = i;
+      ++c[people[i].age];
     }
-    ++count;
-    if (count > 100)
-      people.erase(iter);
   }
 
   for (int i = 0; i < numOfQueries; ++i)
@@ -57,15 +54,13 @@ int main()
     // Print results
     printf("Case #%d:\n", i+1);
     int idx = 0;
-    for (int j = 0; j < people.size(); ++j)
+    for (int j = 0; j < len && idx < output; ++j)
     {
-      if (people[j].age >= startAge && people[j].age <= endAge && idx < output)
+      if (people[b[j]].age >= startAge && people[b[j]].age <= endAge)
       {
-        printf("%s %d %d\n", people[j].name, people[j].age, people[j].worth);
+        printf("%s %d %d\n", people[b[j]].name, people[b[j]].age, people[b[j]].worth);
         ++idx;
       }
-      if (idx == output)
-        break;
     }
     if (!idx)
       printf("None\n");
