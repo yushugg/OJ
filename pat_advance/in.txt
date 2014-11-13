@@ -1,3 +1,18 @@
-11 11
-25 18 0 46 37 3 19 22 57 56 10
-6 0 8 7 10 5 9 1 4 2 3
+17
+Pop
+PeekMedian
+Push 3
+PeekMedian
+Push 2
+PeekMedian
+Push 1
+PeekMedian
+Pop
+Pop
+Push 5
+Push 4
+PeekMedian
+Pop
+Pop
+Pop
+Pop
