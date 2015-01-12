@@ -1,2 +1,3 @@
-Majority Element
-Remove Duplicates From Sorted Array
+Majority Element: Use a counter
+Remove Duplicates From Sorted Array: Two pointers, assignment on original array directly
+Merge Sorted Array: Reversed merge, will save time and space
