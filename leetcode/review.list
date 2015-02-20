@@ -1,3 +1,14 @@
-Majority Element: Use a counter
-Remove Duplicates From Sorted Array: Two pointers, assignment on original array directly
-Merge Sorted Array: Reversed merge, will save time and space
+## Problems
+
+1. Majority Element: Use a counter
+2. Remove Duplicates From Sorted Array: Two pointers, assignment on original array directly
+3. Merge Sorted Array: Reversed merge, will save time and space
+
+
+## Algorithms
+
+### Containing a sequence
+
+1. Rabin-Karp(or Karp-Rabin): Uses hashing to search pattern string in a text. For text of length n and p patterns of combined length m, its average and best case running time is O(n+m) in space O(p), but its worst-case time is O(nm). Because of common part of string, so hashing of a string only need to substraction and addition operation, which will be constant time.
+2. Knuth-Morris-Pratt(or KMP): Search for occurrences of a word within a main text string by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin, thus bypassing re-examination of previously matched characters. Using Partial Match Table to predict movation.
+3. Boyer-Moore: String searching algorithm. Bad characters and good postfixes movation.
