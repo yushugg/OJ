@@ -3,6 +3,7 @@
 1. Majority Element: Use a counter
 2. Remove Duplicates From Sorted Array: Two pointers, assignment on original array directly
 3. Merge Sorted Array: Reversed merge, will save time and space
+4. Min Stack: Use an extra stack to store min elements, if a new element is larger than the current minimum, we do not need to push it on to the min stack. When we perform the pop operation, check if the popped element is the same as the current minimum. If it is, pop it off the min stack too.
 
 
 ## Algorithms
