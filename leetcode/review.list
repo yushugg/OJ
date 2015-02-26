@@ -3,7 +3,9 @@
 1. Majority Element: Use a counter
 2. Remove Duplicates From Sorted Array: Two pointers, assignment on original array directly
 3. Merge Sorted Array: Reversed merge, will save time and space
-4. Min Stack: Use an extra stack to store min elements, if a new element is larger than the current minimum, we do not need to push it on to the min stack. When we perform the pop operation, check if the popped element is the same as the current minimum. If it is, pop it off the min stack too.
+4. Min Stack: Use an extra stack to store min elements, if a new element is larger than the current minimum, we do not need to push it on to the min stack. When we perform the pop operation, check if the popped element is the same as the current minimum. If it is, pop it off the min stack too
+5. Rotate Array: BA = rotate(rotate(A)rotate(B))
+6. Unique Binary Search Trees: DP, F(i, n) = G(i - 1) * G(n - i), F(i, n) means number of unique trees when i is root, G(n) means total number of unique trees when nodes number is n, so G(n) = G(0) * G(n - 1) + G(1) * G(n - 2) + ... + G(n - 1) * G(0)
 
 
 ## Algorithms
