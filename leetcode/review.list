@@ -8,6 +8,7 @@
 6. Unique Binary Search Trees: DP, F(i, n) = G(i - 1) * G(n - i), F(i, n) means number of unique trees when i is root, G(n) means total number of unique trees when nodes number is n, so G(n) = G(0) * G(n - 1) + G(1) * G(n - 2) + ... + G(n - 1) * G(0)
 7. Maximum Subarray: maxSubArray(A, i) = maxSubArray(A, i - 1) > 0 ? maxSubArray(A, i - 1) : 0 + A[i];
 8. Single Number II: Use bits, ones-each bit of int appears once or not, twos-each bit of int appears twice or not, threes-each bit of int appears three times or not, if some bits of threes is marked 1, then these bits of ones and twos will all change to 0.
+9. Sort Colors: Two iterations-Count and reassign; One iteration-two pointers and swap.
 
 
 ## Algorithms
