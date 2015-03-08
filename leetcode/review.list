@@ -10,6 +10,7 @@
 8. Single Number II: Use bits, ones-each bit of int appears once or not, twos-each bit of int appears twice or not, threes-each bit of int appears three times or not, if some bits of threes is marked 1, then these bits of ones and twos will all change to 0.
 9. Sort Colors: Two iterations-Count and reassign; One iteration-two pointers and swap.
 10. Container With Most Water: Two pointers, front and back.
+11. Search in Rotated Sorted Array: Binary search, but compare A[mid] and A[low] to classify this problem, not A[mid] and target.
 
 
 ## Algorithms
