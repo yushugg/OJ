@@ -11,6 +11,7 @@
 9. Sort Colors: Two iterations-Count and reassign; One iteration-two pointers and swap.
 10. Container With Most Water: Two pointers, front and back.
 11. Search in Rotated Sorted Array: Binary search, but compare A[mid] and A[low] to classify this problem, not A[mid] and target.
+12. Set Matrix Zeros: Store count things in place, just use one row or column from matrix to save something, so extra space will be saved.
 
 
 ## Algorithms
