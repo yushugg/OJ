@@ -15,6 +15,7 @@
 13. Linked List Cycle II: To determine a cycle use slow and fast pointer, both start from head, to find the cycle start, use an entry pointer starting from head, then both move entry and slow one step by step, then meet position is the entry point.
 14. Permutations: for E: {a, b, c}, Perm(E) = aPerm(Enoa) + bPerm(Enob) + cPerm(Enoc), so if size(E) == 1, add result, else for begin to end, swap(begin and i) Permutation swap(begin and i). Last step is called the "backtrack step".
 15. Unique Binary Search Trees II: return std::vector<TreeNode*> to iterate and to add in the front.
+16. 3Sum Closest: Similar to 3Sum, for each one convert to a 2Sum problem, 2Sum use two pointers from start and end, O(N).
 
 
 ## Algorithms
