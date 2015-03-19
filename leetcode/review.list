@@ -25,5 +25,6 @@
 1. Rabin-Karp(or Karp-Rabin): Uses hashing to search pattern string in a text. For text of length n and p patterns of combined length m, its average and best case running time is O(n+m) in space O(p), but its worst-case time is O(nm). Because of common part of string, so hashing of a string only need to substraction and addition operation, which will be constant time.
 2. Knuth-Morris-Pratt(or KMP): Search for occurrences of a word within a main text string by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin, thus bypassing re-examination of previously matched characters. Using Partial Match Table to predict movation.
 3. Boyer-Moore: String searching algorithm. Bad characters and good postfixes movation.
-4. Backtracking: First, some condition do something; Second, for-loop to other possible things. If first and second are one if-and-else, remember to undo parameters in for-loop.
+4. Backtracking: First, some condition do something; Second, for-loop to other possible things. If first and second are one if-and-else, remember to undo parameters in for-loop.  
+**Remember, do not need to generate next char or int, just for loop enough**
 5. List: First, find previous list node, or add head if want to be convinence.
