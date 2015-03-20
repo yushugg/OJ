@@ -16,6 +16,7 @@
 14. Permutations: for E: {a, b, c}, Perm(E) = aPerm(Enoa) + bPerm(Enob) + cPerm(Enoc), so if size(E) == 1, add result, else for begin to end, swap(begin and i) Permutation swap(begin and i). Last step is called the "backtrack step".
 15. Unique Binary Search Trees II: return std::vector<TreeNode*> to iterate and to add in the front.
 16. 3Sum Closest: Similar to 3Sum, for each one convert to a 2Sum problem, 2Sum use two pointers from start and end, O(N).
+17. Gas Station: Greedy, two pointers starting from the same position and one goes left, another goes right.
 
 
 ## Algorithms
