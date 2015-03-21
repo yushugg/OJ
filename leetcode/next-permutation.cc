@@ -8,7 +8,7 @@ public:
     for (int i = num.size() - 1; i >= 0; --i)
     {
       if (!i)
-        std::sort(num.begin(), num.end());
+        std::reverse(num.begin(), num.end());
       else if (num[i] > num[i - 1])
       {
         // Select min
@@ -19,7 +19,7 @@ public:
         // Swap
         std::swap(num[i - 1], num[min]);
         // Sort others
-        std::sort(num.begin() + i, num.end());
+        std::reverse(num.begin() + i, num.end());
 
         break;
       }
