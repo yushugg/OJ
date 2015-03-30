@@ -1,3 +1,5 @@
+#include <cstdio>
+
 class Solution {
 public:
   bool search(int A[], int n, int target) {
@@ -10,22 +12,37 @@ public:
       mid = (low + high) / 2;
       if (A[mid] == target)
         return true;
+
       if (A[mid] > A[low])
       {
-        if (A[mid] <= target || target >= A[low])
-          low = mid;
+        if (A[mid] < target || target < A[low])
+          low = mid + 1;
         else
-          high = mid;
+          high = mid - 1;
       }
-      else
+      else if (A[mid] < A[low])
       {
-        if (A[mid] >= target || target <= A[high])
-          high = mid;
+        if (A[mid] > target || target > A[high])
+          high = mid - 1;
         else
-          low = mid;
-      }
+          low = mid + 1;
+      } else
+        ++low;
     }
 
     return false;
   }
 };
+
+int main(int argc, char* argv[])
+{
+  int A[] = { 3, 4, 4, 5, 1, 2, 2, 2, 3 };
+  int size = 9;
+
+  Solution s;
+  for (int i = 0; i < 6; ++i)
+    printf("%d\n", s.search(A, size, i));
+
+  return 0;
+}
+
