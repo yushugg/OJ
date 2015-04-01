@@ -18,6 +18,7 @@
 16. 3Sum Closest: Similar to 3Sum, for each one convert to a 2Sum problem, 2Sum use two pointers from start and end, O(N).
 17. Gas Station: Greedy, two pointers starting from the same position and one goes left, another goes right.
 18. Anagrams: Use unordered_map to construct a hash table.
+19. Two Sum: Use a hashMap or map to store {need number, now index}, can be O(N), but consume O(N) space complexity as well.
 
 
 ## Algorithms
