@@ -1,91 +1,123 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+#include <cstdio>
+
+struct ListNode {
+  int val;
+  ListNode *next;
+  ListNode(int x) : val(x), next(NULL) {}
+};
+
 class Solution {
 public:
-  ListNode *merge(ListNode *fakeHead, ListNode *first, int firstCount, ListNode *second, int secondCount, ListNode *&last)
+  ListNode *merge(ListNode *first, ListNode *second, ListNode *last)
   {
-    int total = firstCount + secondCount;
-    ListNode *p = fakeHead;
-    while (first && second && firstCount && secondCount)
+    ListNode *f, *e;
+    f = first->next;
+    e = second->next;
+
+    // Movement pointer
+    ListNode *p = first;
+    ListNode *secondNext = second->next;
+    ListNode *lastNext = last->next;
+    while (f != secondNext && e != lastNext)
     {
-      if (first->val <= second->val)
+      if (f->val <= e->val)
       {
-        p->next = first;
-        first = first->next;
-        --firstCount;
+        p->next = f;
+        f = f->next;
       }
       else
       {
-        p->next = second;
-        second = second->next;
-        --secondCount;
+        p->next = e;
+        e = e->next;
       }
       p = p->next;
     }
 
-    while (first && firstCount--)
+    while (f != secondNext)
     {
-      p->next = first;
+      p->next = f;
       p = p->next;
-      first = first->next;
+      f = f->next;
     }
 
-    while (second && secondCount--)
+    while (e != lastNext)
     {
-      p->next = second;
+      p->next = e;
       p = p->next;
-      second = second->next;
+      e = e->next;
     }
 
-    last = fakeHead;
-    while (total--)
-      last = last->next;
+    p->next = lastNext;
 
-    return fakeHead->next;
+    // Return new last
+    return p;
   }
 
   ListNode *sortList(ListNode *head) {
-    if (!head)
-      return head;
+    ListNode *dummyHead = new ListNode(0);
+    dummyHead->next = head;
 
+    // Count length
     int length = 0;
-    ListNode *h = head;
-    while (h)
+    ListNode *h = dummyHead;
+    while (h->next)
     {
       ++length;
       h = h->next;
     }
 
     ListNode *first, *second, *last;
-    ListNode *fakeHead = new ListNode(0);
-    ListNode *dummyHead = new ListNode(0);
-    dummyHead->next = head;
-    for (int i = 1; i < length; i <<= 2)
+    for (int step = 1; step < length; step <<= 1)
     {
-      ListNode *p = dummyHead;
-      ListNode *prev = dummyHead;
-      for (int k = 0; k < length / i / 2; ++k)
+      first = dummyHead;
+      while (first && first->next)
       {
-        ListNode *first = p->next;
-        for (int j = 0; j < i && p->next; ++j)
-          p = p->next;
-        ListNode *second = p->next;
-        for (int j = 0; j < i && p->next; ++j)
-          p = p->next;
-        ListNode *end = p->next;
-        prev = merge(fakeHead, first, i, second, i, last);
+        second = first;
+        int s = step;
+        while (second->next && s--)
+          second = second->next;
 
-        prev = last;
-        prev->next = end;
+        last = second;
+        s = step;
+        while (last->next && s--)
+          last = last->next;
+
+        // Merge and update first
+        first = merge(first, second, last);
       }
     }
 
     return dummyHead->next;
   }
 };
+
+int main()
+{
+  ListNode *head = new ListNode(0);
+  ListNode *p = head;
+  int size;
+  scanf("%d", &size);
+  for (int i = 0; i < size; ++i)
+  {
+    int val;
+    scanf("%d", &val);
+    ListNode *node = new ListNode(val);
+    p->next = node;
+    p = p->next;
+  }
+
+  Solution s;
+  ListNode *sortedList = s.sortList(head->next);
+
+  // Output
+  while (sortedList)
+  {
+    printf("%d->", sortedList->val);
+    sortedList = sortedList->next;
+  }
+  puts("");
+
+  return 0;
+}
+
+
