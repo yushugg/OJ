@@ -7,22 +7,24 @@ using namespace std;
 class Solution {
 public:
   bool wordBreak(string s, unordered_set<string> &dict) {
-    for (int i = 0; i < s.length(); ++i)
+    bool *canBreak = new bool[s.length() + 1];
+    for (int i = 1; i < s.length() + 1; ++i)
+      canBreak[i] = false;
+    canBreak[0] = true;
+
+    for (int i = 1; i < s.length() + 1; ++i)
     {
-      string str = s.substr(0, i + 1);
-      unordered_set<string>::iterator iter;
-      if ((iter = dict.find(str)) != dict.end())
+      for (int j = 1; j <= i; ++j)
       {
-        if (!s.substr(i+1).length())
-          return true;
-        dict.erase(iter);
-        if (wordBreak(s.substr(i + 1), dict))
-          return true;
-        dict.insert(str);
+        if (canBreak[j - 1] && dict.find(s.substr(j - 1, i - j + 1)) != dict.end())
+        {
+          canBreak[i] = true;
+          break;
+        }
       }
     }
 
-    return false;
+    return canBreak[s.length()];
   }
 };
 

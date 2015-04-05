@@ -32,3 +32,15 @@
 **Remember, do not need to generate next char or int, just for loop enough**  
 **Same for loop explains same position, next recursive explains next position**
 5. List: First, find previous list node, or add head if want to be convinence.
+6. Tree level order traversal, including level: Every time read all queue content, then push all children of all content
+
+    	while(!q.empty()) {
+        	int size = q.size();
+        	for (int i=0; i<size; i++) {
+            	TreeNode *node = q.front();
+            	q.pop();
+            	if (i==(size-1)) vi.push_back(node->val);
+            	if (node->left) q.push(node->left);
+            	if (node->right) q.push(node->right);
+        	}
+    	}
