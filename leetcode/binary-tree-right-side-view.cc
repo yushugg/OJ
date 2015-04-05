@@ -14,15 +14,31 @@ public:
     if (!root)
       return result;
 
-    while (root->right)
+    std::queue<TreeNode*> queue;
+    queue.push(root);
+    queue.push(NULL);
+    int value;
+    while (!queue.empty())
     {
-      result.push_back(root->val);
-      root = root->right;
-    }
-    result.push_back(root->val);
+      TreeNode *node = queue.front();
+      queue.pop();
 
-    vector<int> newGen = rightSideView(root->left);
-    result.insert(result.end(), newGen.begin(), newGen.end());
+      if (node)
+      {
+        value = node->val;
+        if (node->left)
+          queue.push(node->left);
+        if (node->right)
+          queue.push(node->right);
+      }
+      else
+      {
+        result.push_back(value);
+        if (queue.empty())
+          break;
+        queue.push(NULL);
+      }
+    }
 
     return result;
   }
