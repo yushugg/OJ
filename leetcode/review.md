@@ -21,6 +21,12 @@
 19. Two Sum: Use a hashMap or map to store {need number, now index}, can be O(N), but consume O(N) space complexity as well.
 20. Word Break: DP, canBreak[i] = canBreak[j<=i] && dict.find(str.substr(j~i))
 21. String to Integer (atoi): To deal with overflow, inspect the current number before multiplication. If the current number is greater than 214748364, we know it is going to overflow. On the other hand, if the current number is equal to 214748364, we know that it will overflow only when the current digit is greater than or equal to 8, ie. 2147483648 and 2147483649.
+22. Maximum Product Subarray: M1) Use max and min two arrays to store result
+		
+		f(k) = max( f(k-1) * A[k], A[k], g(k-1) * A[k] )
+		g(k) = min( g(k-1) * A[k], A[k], f(k-1) * A[k] )
+		
+	M2) Two pointers, calculate frontProduct from front and endProduct from end, get the max one, this will cancel the sign problems
 
 
 ## Algorithms
