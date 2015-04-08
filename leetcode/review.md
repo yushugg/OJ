@@ -27,6 +27,7 @@
 		g(k) = min( g(k-1) * A[k], A[k], f(k-1) * A[k] )
 		
 	M2) Two pointers, calculate frontProduct from front and endProduct from end, get the max one, this will cancel the sign problems
+23. Median of Two Sorted Arrays: Convert to find kth min, first array to find k/2 - 1, second to find n - k/2 + 1, then find(A + a, m - a, B, n, k - a), or find(A, m, B + b, n - b, k - b), always make m < n, and test m and k == 1
 
 
 ## Algorithms
