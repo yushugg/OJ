@@ -10,7 +10,7 @@
 8. Single Number II: Use bits, ones-each bit of int appears once or not, twos-each bit of int appears twice or not, threes-each bit of int appears three times or not, if some bits of threes is marked 1, then these bits of ones and twos will all change to 0.
 9. Sort Colors: Two iterations-Count and reassign; One iteration-two pointers and swap.
 10. Container With Most Water: Two pointers, front and back.
-11. Search in Rotated Sorted Array: Binary search, but compare A[mid] and A[low] to classify this problem, not A[mid] and target.
+11. Search in Rotated Sorted Array: Binary search, but compare A[mid] and A[low] to classify this problem, not A[mid] and target. If low == mid, just make ++low to move to the next.
 12. Set Matrix Zeros: Store count things in place, just use one row or column from matrix to save something, so extra space will be saved.
 13. Linked List Cycle II: To determine a cycle use slow and fast pointer, both start from head, to find the cycle start, use an entry pointer starting from head, then both move entry and slow one step by step, then meet position is the entry point.
 14. Permutations: for E: {a, b, c}, Perm(E) = aPerm(Enoa) + bPerm(Enob) + cPerm(Enoc), so if size(E) == 1, add result, else for begin to end, swap(begin and i) Permutation swap(begin and i). Last step is called the "backtrack step".
