@@ -30,6 +30,7 @@
 23. Median of Two Sorted Arrays: Convert to find kth min, first array to find k/2 - 1, second to find n - k/2 + 1, then find(A + a, m - a, B, n, k - a), or find(A, m, B + b, n - b, k - b), always make m < n, and test m and k == 1
 24. Longest Consecutive Sequence: Use a hashmap(unordered_map)
 25. Populating Next Right Pointers in Each Node II: Use next pointer to generate next level data, use prev pointer and consider left or right existence situations
+26. Edit Distance: DP, table[m+1][n+1], [i][j] = min([i-1][j] + 1, [i][j-1] + 1, [i-1][j-1]+cost0or1)
 
 
 ## Algorithms
