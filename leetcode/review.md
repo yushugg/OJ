@@ -31,6 +31,7 @@
 24. Longest Consecutive Sequence: Use a hashmap(unordered_map)
 25. Populating Next Right Pointers in Each Node II: Use next pointer to generate next level data, use prev pointer and consider left or right existence situations
 26. Edit Distance: DP, table[m+1][n+1], [i][j] = min([i-1][j] + 1, [i][j-1] + 1, [i-1][j-1]+cost0or1)
+27. Distinct Subsequences: DP, consider substring T, use one dimensional array, if S[i-1] == T[j-1] dp[j] += dp[j-1], for j decreases from t to 1; Use two dimensional array, S[i-1] != T[j-1], dp[i][j] = dp[i][j-1], S[i-1] == T[j-1], dp[i][j] = dp[i][j-1] + dp[i-1][j-1]
 
 
 ## Algorithms
