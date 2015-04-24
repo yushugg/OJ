@@ -35,6 +35,7 @@
 28. Copy List with Random Pointer: Use a hashtable to record <origin node, new node>, then iterate once again to recover the random pointers; Another method, new node can be append right after origin node, this can save space.
 29. Recover Binary Search Tree: Morris Traversal, the idea of thread tree
 30. Maximum Gap: Use buckets.
+31. Merge Intervals, Insert Interval: Sort intervals by start, then consider case to insert new interval.
 
 ## Algorithms
 
