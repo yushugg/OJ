@@ -1,3 +1,7 @@
+## Tips
+
+1. vector.size() is unsigned int, so if vector.size() == 0, vector.size() - 1 > 0
+
 ## Problems
 
 1. Majority Element: Use a counter
@@ -6,7 +10,7 @@
 4. Min Stack: Use an extra stack to store min elements, if a new element is larger than the current minimum, we do not need to push it on to the min stack. When we perform the pop operation, check if the popped element is the same as the current minimum. If it is, pop it off the min stack too
 5. Rotate Array: BA = rotate(rotate(A)rotate(B))
 6. Unique Binary Search Trees: DP, F(i, n) = G(i - 1) * G(n - i), F(i, n) means number of unique trees when i is root, G(n) means total number of unique trees when nodes number is n, so G(n) = G(0) * G(n - 1) + G(1) * G(n - 2) + ... + G(n - 1) * G(0)
-7. Maximum Subarray: maxSubArray(A, i) = maxSubArray(A, i - 1) > 0 ? maxSubArray(A, i - 1) : 0 + A[i];
+7. Maximum Subarray: maxSubArray(A, i) = maxSubArray(A, i - 1) > 0 ? maxSubArray(A, i - 1) : 0 + A[i]; maxSubArray must has A[i] as the end element.
 8. Single Number II: Use bits, ones-each bit of int appears once or not, twos-each bit of int appears twice or not, threes-each bit of int appears three times or not, if some bits of threes is marked 1, then these bits of ones and twos will all change to 0.
 9. Sort Colors: Two iterations-Count and reassign; One iteration-two pointers and swap.
 10. Container With Most Water: Two pointers, front and back.
@@ -36,6 +40,7 @@
 29. Recover Binary Search Tree: Morris Traversal, the idea of thread tree
 30. Maximum Gap: Use buckets.
 31. Merge Intervals, Insert Interval: Sort intervals by start, then consider case to insert new interval.
+32. Largest Rectangle in Histogram: Two stacks to store increasing heights and index, when find decreasing height, then pop until increasing height, and calculate area, push new height and **last index**.
 
 ## Algorithms
 
