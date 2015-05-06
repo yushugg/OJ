@@ -42,6 +42,7 @@
 31. Merge Intervals, Insert Interval: Sort intervals by start, then consider case to insert new interval.
 32. Largest Rectangle in Histogram: Two stacks to store increasing heights and index, when find decreasing height, then pop until increasing height, and calculate area, push new height and **last index**.
 33. Word Ladder: Construct a graph, and BFS.
+34. Repeated DNA Sequences: Hash, and try to save space.
 
 ## Algorithms
 
