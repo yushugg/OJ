@@ -43,6 +43,7 @@
 32. Largest Rectangle in Histogram: Two stacks to store increasing heights and index, when find decreasing height, then pop until increasing height, and calculate area, push new height and **last index**.
 33. Word Ladder: Construct a graph, and BFS.
 34. Repeated DNA Sequences: Hash, and try to save space.
+35. Surrounded Regions: DFS will cause stack overflow, use BFS instead(table modify inside condition).
 
 ## Algorithms
 
