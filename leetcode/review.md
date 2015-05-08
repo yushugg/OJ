@@ -45,6 +45,7 @@
 34. Repeated DNA Sequences: Hash, and try to save space.
 35. Surrounded Regions: DFS will cause stack overflow, use BFS instead(table modify inside condition).
 36. Fraction to Recurring Decimal: Use numerator*10(i.e. reminder) number to decide if loop exist, and use this number to hash.
+37. Scramble String: both +++----- or either -----+++, or use DP, dp[i][j][k], means start from ith of s1 and from jth s2, and length is k, if it is scramble or not.
 
 ## Algorithms
 
