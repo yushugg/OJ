@@ -46,6 +46,16 @@
 35. Surrounded Regions: DFS will cause stack overflow, use BFS instead(table modify inside condition).
 36. Fraction to Recurring Decimal: Use numerator*10(i.e. reminder) number to decide if loop exist, and use this number to hash.
 37. Scramble String: both +++----- or either -----+++, or use DP, dp[i][j][k], means start from ith of s1 and from jth s2, and length is k, if it is scramble or not.
+38. Best Time to Buy and Sell Stock III: Find a position i, and split into maxProfit1 for prices[0...i] and maxProfit2 for prices[i...n];  
+Then go through forwardly
+		
+		forward[i] = max(forward[i - 1], prices[i] - lowest[0...i])	
+and go through backwardly
+		
+		backward[i] = max(backward[i + 1], highest[i...n] - prices[i])
+Finally, add up forward[i] and backward[i], get the max
+		
+		maxProfit = max(maxProfit, forward[i] + backward[i])
 
 ## Algorithms
 
