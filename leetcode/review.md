@@ -56,6 +56,10 @@ and go through backwardly
 Finally, add up forward[i] and backward[i], get the max
 		
 		maxProfit = max(maxProfit, forward[i] + backward[i])
+39. Best Time to Buy and Sell Stock IV:
+
+		dp[i, j] = max(dp[i, j-1], dp[i-1,t] + prices[j] - prices[t+1])
+	When k > prices.size() / 2, problem turns to be any transactions problem, so can be speed up.
 
 ## Algorithms
 
