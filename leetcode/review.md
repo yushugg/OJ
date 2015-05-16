@@ -60,6 +60,7 @@ Finally, add up forward[i] and backward[i], get the max
 
 		dp[i, j] = max(dp[i, j-1], dp[i-1,t] + prices[j] - prices[t+1])
 	When k > prices.size() / 2, problem turns to be any transactions problem, so can be speed up.
+40. Maximal Rectangle: See every row as a ground line, and ones as height, then this problem converts to Largest Rectangle in Histogram.
 
 ## Algorithms
 
