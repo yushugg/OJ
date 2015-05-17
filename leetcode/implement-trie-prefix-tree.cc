@@ -56,7 +56,7 @@ public:
     }
     fakeHead->next = p->child;
     TrieNode *iter = fakeHead;
-    while (iter->next) iter = iter->next;
+    while (iter->next && '\0' != iter->next->c) iter = iter->next;
     iter->next = new TrieNode('\0');
     delete fakeHead;
   }
