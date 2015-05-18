@@ -1,6 +1,8 @@
 ## Tips
 
 1. vector.size() is unsigned int, so if vector.size() == 0, vector.size() - 1 > 0
+2. DP sometimes can get from recursive ideas
+3. Two pointers: if both from start position, just move one(end or start) pointer, and select time to update another pointer
 
 ## Problems
 
@@ -70,6 +72,7 @@ Finally, add up forward[i] and backward[i], get the max
 			dp[i][j] = dp[i][j - 2]
 			// x* >= 1 times
 			dp[i][j] = dp[i - 1][j] && (s[i - 1] == p[j - 2] || '.' == p[j - 2])
+42. Longest Valid Parentheses: Use a stack to store index of parentheses, every time when visited a ')' thisIndex - popedStackTopIndex.
 
 ## Algorithms
 
