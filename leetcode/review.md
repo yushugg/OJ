@@ -61,6 +61,15 @@ Finally, add up forward[i] and backward[i], get the max
 		dp[i, j] = max(dp[i, j-1], dp[i-1,t] + prices[j] - prices[t+1])
 	When k > prices.size() / 2, problem turns to be any transactions problem, so can be speed up.
 40. Maximal Rectangle: See every row as a ground line, and ones as height, then this problem converts to Largest Rectangle in Histogram.
+41. Regular Expression Matching: dp[i][j], i, j means length of string and pattern
+
+		if p[j - 1] != '*':
+			dp[i][j] = dp[i - 1][j - 1] && (s[i - 1] == p[j - 1] || '.' == p[j - 1])
+		else:
+			// x* 0 times
+			dp[i][j] = dp[i][j - 2]
+			// x* >= 1 times
+			dp[i][j] = dp[i - 1][j] && (s[i - 1] == p[j - 2] || '.' == p[j - 2])
 
 ## Algorithms
 
