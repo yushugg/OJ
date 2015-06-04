@@ -1,7 +1,7 @@
 ## Tips
 
 1. vector.size() is unsigned int, so if vector.size() == 0, vector.size() - 1 > 0
-2. DP sometimes can get from recursive ideas
+2. DP sometimes can get from recursive ideas, Often consider from back to front
 3. Two pointers: if both from start position, just move one(end or start) pointer, and select time to update another pointer
 
 ## Problems
@@ -74,6 +74,7 @@ Finally, add up forward[i] and backward[i], get the max
 			dp[i][j] = dp[i - 1][j] && (s[i - 1] == p[j - 2] || '.' == p[j - 2])
 42. Longest Valid Parentheses: Use a stack to store index of parentheses, every time when visited a ')' thisIndex - popedStackTopIndex.
 43. House Robber II: Consider not rob 0(1..n-1), or not rob n-1(0..n-2) two situations, for each situation use DP money[i] = max(money[i-2], money[i-3]) + nums[i]
+44. Contains Duplicate III: divide by t + 1, then map into same bucket if values are near by t, use a map size with k, pay attention to change to long.
 
 ## Algorithms
 
