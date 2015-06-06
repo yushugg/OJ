@@ -75,6 +75,7 @@ Finally, add up forward[i] and backward[i], get the max
 42. Longest Valid Parentheses: Use a stack to store index of parentheses, every time when visited a ')' thisIndex - popedStackTopIndex.
 43. House Robber II: Consider not rob 0(1..n-1), or not rob n-1(0..n-2) two situations, for each situation use DP money[i] = max(money[i-2], money[i-3]) + nums[i]
 44. Contains Duplicate III: divide by t + 1, then map into same bucket if values are near by t, use a map size with k, pay attention to change to long.
+45. Count Complete Tree Nodes: Check leftmost and rightmost level, if equal return (1 << level) - 1, else recursively count left and right subtree + 1.
 
 ## Algorithms
 
