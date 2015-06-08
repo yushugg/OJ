@@ -14,7 +14,7 @@
 6. Unique Binary Search Trees: DP, F(i, n) = G(i - 1) * G(n - i), F(i, n) means number of unique trees when i is root, G(n) means total number of unique trees when nodes number is n, so G(n) = G(0) * G(n - 1) + G(1) * G(n - 2) + ... + G(n - 1) * G(0)
 7. Maximum Subarray: maxSubArray(A, i) = maxSubArray(A, i - 1) > 0 ? maxSubArray(A, i - 1) : 0 + A[i]; maxSubArray must has A[i] as the end element.
 8. Single Number II: Use bits, ones-each bit of int appears once or not, twos-each bit of int appears twice or not, threes-each bit of int appears three times or not, if some bits of threes is marked 1, then these bits of ones and twos will all change to 0.
-9. Sort Colors: Two iterations-Count and reassign; One iteration-two pointers and swap.
+9. Sort Colors: Two iterations-Count and reassign; One iteration-**three pointers(start, end, i)** and swap.
 10. Container With Most Water: Two pointers, front and back.
 11. Search in Rotated Sorted Array: Binary search, but compare A[mid] and A[low] to classify this problem, not A[mid] and target. If low == mid, just make ++low to move to the next.
 12. Set Matrix Zeros: Store count things in place, just use one row or column from matrix to save something, so extra space will be saved.
