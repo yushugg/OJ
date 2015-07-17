@@ -77,6 +77,7 @@ Finally, add up forward[i] and backward[i], get the max
 44. Contains Duplicate III: divide by t + 1, then map into same bucket if values are near by t, use a map size with k, pay attention to change to long.
 45. Count Complete Tree Nodes: Check leftmost and rightmost level, if equal return (1 << level) - 1, else recursively count left and right subtree + 1.
 46. Interleaving String: dp[i][j] = (dp[i - 1][j] && s1[i - 1] == s3[i + j - 1]) || (dp[i][j - 1] && s2[j - 1] == s3[i + j - 1]);
+47. Product of Array Except Self: Two rounds, first from left to right, second from right to left.
 
 ## Algorithms
 
