@@ -79,6 +79,7 @@ Finally, add up forward[i] and backward[i], get the max
 46. Interleaving String: dp[i][j] = (dp[i - 1][j] && s1[i - 1] == s3[i + j - 1]) || (dp[i][j - 1] && s2[j - 1] == s3[i + j - 1]);
 47. Product of Array Except Self: Two rounds, first from left to right, second from right to left.
 48. Search a 2D Matrix II: From the bottom left number, and move one step for row or col every time.
+49. Different Ways to Add Parentheses: Recursively, when meet a operator, compute vector left and right, and combine these two vectors.
 
 ## Algorithms
 
