@@ -1,26 +1,31 @@
 #include <vector>
-#include <unordered_set>
-#include <algorithm>
 #include <cstdio>
 
 using namespace std;
 
 class Solution {
+private:
+  int findMax(const vector<int>& nums, int start, int end) {
+    int maxIdx = start;
+    for (int i = start + 1; i < end; ++i) {
+      if (nums[i] >= nums[maxIdx]) maxIdx = i;
+    }
+    return maxIdx;
+  }
+
 public:
   vector<int> maxSlidingWindow(vector<int>& nums, int k) {
     if (nums.empty()) return vector<int>();
     if (k == 1) return vector<int>(nums);
-    unordered_set<int> set;
-    vector<int> result;
-    int maxVal = *max_element(nums.begin(), nums.begin() + k);
-    result.push_back(maxVal);
-    for (int i = 0; i < k; ++i) {
-      if (maxVal == nums[i]) set.insert(i);
-    }
 
+    vector<int> result;
+    int maxIdx = findMax(nums, 0, k);
+    result.push_back(nums[maxIdx]);
     for (int i = 1; i < nums.size() - k + 1; ++i) {
-      int front = i - 1, end = i + k - 1;
-      if (nums[front] == result.back()) 
+      if (nums[maxIdx] > nums[i + k - 1]) {
+        if (maxIdx == i - 1) maxIdx = findMax(nums, i, i + k);
+      } else maxIdx = i + k - 1;
+      result.push_back(nums[maxIdx]);
     }
 
     return result;
